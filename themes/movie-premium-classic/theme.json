@@ -1,0 +1,64 @@
+{
+    "name": "Movie Premium Classic",
+    "slug": "movie-premium-classic",
+    "version": "1.0.0",
+    "author": "FilmNova",
+    "description": "Theme phim dark\/blue port tu template hotav.in, da lam sach Blogger markup va bo sung responsive.",
+    "preview": "preview.png",
+    "engine": "filmnova-theme-v1",
+    "min_core": "1.0.0",
+    "type": "presentation-only",
+    "assets": {
+        "css": [
+            "style.css",
+            "responsive.css"
+        ],
+        "js": [],
+        "images": "assets\/images",
+        "icons": "assets\/icons",
+        "fonts": "assets\/fonts"
+    },
+    "layout": {
+        "container_width": 1200,
+        "sidebar": "right",
+        "grid": {
+            "desktop": 6,
+            "tablet": 4,
+            "mobile": 3
+        }
+    },
+    "colors": {
+        "bg": "#252525",
+        "surface": "#111111",
+        "primary": "#00a8ec",
+        "accent": "#ff3e6c",
+        "text": "#e8e8e8",
+        "muted": "#9a9a9a"
+    },
+    "typography": {
+        "font_family": "Arial, Helvetica, sans-serif",
+        "base_size": "13px"
+    },
+    "supports": [
+        "home",
+        "movie-detail",
+        "watch",
+        "category",
+        "search",
+        "banner-slots",
+        "comments"
+    ],
+    "entry": "style.css",
+    "features": [
+        "header",
+        "nav",
+        "search",
+        "hero",
+        "catalog",
+        "sidebar",
+        "ads",
+        "player",
+        "comments",
+        "footer"
+    ]
+}

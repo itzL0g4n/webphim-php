@@ -1,0 +1,31 @@
+{
+  "name": "FilmNova AI Theme Template",
+  "slug": "ai-theme-template",
+  "version": "2.0.0",
+  "engine": "filmnova-theme-v2",
+  "contract": "filmnova-theme-v2",
+  "entry": "style.css",
+  "script": "script.js",
+  "description": "Theme mặc định FilmNova, tách hoàn toàn khỏi Core bằng bộ view + CSS riêng.",
+  "author": "FilmNova",
+  "views": {
+    "header": "views/header.php",
+    "home": "views/home.php",
+    "browse": "views/browse.php",
+    "watch": "views/watch.php",
+    "footer": "views/footer.php"
+  },
+  "features": [
+    "header",
+    "nav",
+    "search",
+    "hero",
+    "catalog",
+    "sidebar",
+    "ads",
+    "player",
+    "comments",
+    "rating",
+    "footer"
+  ]
+}

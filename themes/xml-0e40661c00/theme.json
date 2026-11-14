@@ -1,0 +1,22 @@
+{
+    "name": "",
+    "slug": "xml-0e40661c00",
+    "version": "1.0.0",
+    "description": "Blogger XML imported safely. Blogger markup\/CSS is stored as source; FilmNova keeps its native feature shell.",
+    "author": "Imported",
+    "entry": "style.css",
+    "features": [
+        "header",
+        "nav",
+        "search",
+        "hero",
+        "catalog",
+        "sidebar",
+        "ads",
+        "player",
+        "comments",
+        "footer"
+    ],
+    "engine": "filmnova-theme-v1",
+    "source": "Blogger XML"
+}

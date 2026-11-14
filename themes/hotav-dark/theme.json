@@ -1,0 +1,21 @@
+{
+    "name": "HotAV Dark Classic",
+    "slug": "hotav-dark",
+    "version": "1.0.0",
+    "description": "Theme native FilmNova dựng lại theo giao diện template HotAV.In: nền tối, nhấn xanh cyan, poster dày đặc.",
+    "author": "FilmNova",
+    "entry": "style.css",
+    "features": [
+        "header",
+        "nav",
+        "search",
+        "hero",
+        "catalog",
+        "sidebar",
+        "ads",
+        "player",
+        "comments",
+        "footer"
+    ],
+    "engine": "filmnova-universal-v1"
+}

@@ -1,0 +1,11 @@
+<?php
+$adminTitle='Banner'; require __DIR__.'/_header.php';
+if(isset($_GET['del'])){db()->prepare('DELETE FROM banners WHERE id=?')->execute([(int)$_GET['del']]); header('Location:banners.php'); exit;}
+if(isset($_GET['toggle'])){db()->prepare('UPDATE banners SET active=1-active WHERE id=?')->execute([(int)$_GET['toggle']]); header('Location:banners.php'); exit;}
+if($_SERVER['REQUEST_METHOD']==='POST'){csrf_check(); db()->prepare('INSERT INTO banners(title,subtitle,image_url,link_url,position,button_text,active,sort_order) VALUES(?,?,?,?,?,?,?,?)')->execute([trim($_POST['title']??''),trim($_POST['subtitle']??''),trim($_POST['image_url']??''),trim($_POST['link_url']??''),trim($_POST['position']??'home'),trim($_POST['button_text']??''),isset($_POST['active'])?1:0,(int)($_POST['sort_order']??0)]); header('Location:banners.php'); exit;}
+$bs=db()->query('SELECT * FROM banners ORDER BY sort_order,id DESC')->fetchAll();
+?>
+<div class="admin-head"><div><small>ADS</small><h1>Banner & quảng cáo</h1></div></div>
+<div class="admin-grid">
+<section class="admin-card"><form class="admin-form" method="post"><input type="hidden" name="csrf" value="<?=e(csrf())?>"><label>Tên banner<input name="title" required></label><label>Subtitle<input name="subtitle"></label><label>Ảnh URL<input name="image_url"></label><label>Link đích<input name="link_url"></label><label>Vị trí<input name="position" value="home"></label><label>Nút<input name="button_text" value="Xem ngay"></label><label>Thứ tự<input type="number" name="sort_order" value="0"></label><label><input type="checkbox" name="active" checked> Bật</label><button class="btn primary">＋ Thêm banner</button></form></section>
+<section class="admin-card"><table class="admin-table"><tr><th>Tên</th><th>Vị trí</th><th>Trạng thái</th><th></th></tr><?php foreach($bs as $b):?><tr><td><?=e($b['title'])?></td><td><?=e($b['position'])?></td><td><?= $b['active']?'Bật':'Tắt' ?></td><td><a class="btn" href="?toggle=<?=$b['id']?>">Bật/Tắt</a><a class="btn red" onclick="return confirm('Xóa?')" href="?del=<?=$b['id']?>">Xóa</a></td></tr><?php endforeach;?></table></section></div><?php require __DIR__.'/_footer.php';?>

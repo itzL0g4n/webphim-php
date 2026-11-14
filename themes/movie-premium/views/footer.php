@@ -1,0 +1,5 @@
+</div></div><footer class="fm-footer"><div class="container fm-foot-grid"><div><div class="fm-logo"><span class="fm-logo-badge">F</span><span class="fm-logo-name"><?=e(setv('site_name','FilmNova'))?></span></div><p><?=e(setv('site_tagline','Xem phim mới cập nhật mỗi ngày'))?></p></div><div><b>KHÁM PHÁ</b><a href="<?=e(site('browse.php'))?>">Tất cả phim</a><a href="<?=e(site('browse.php?sort=views'))?>">Xem nhiều</a><a href="<?=e(site('search.php'))?>">Tìm kiếm</a></div><div><b>LIÊN HỆ QUẢNG CÁO</b><?php foreach(['facebook'=>'Facebook','telegram'=>'Telegram','zalo'=>'Zalo','tiktok'=>'TikTok'] as $k=>$label):$u=setv('contact_'.$k,'');if($u):?><a href="<?=e($u)?>" target="_blank" rel="noopener">● <?=e($label)?></a><?php endif;endforeach;?></div></div><div class="container fm-copy">© <?=date('Y')?> <?=e(setv('site_name','FilmNova'))?></div></footer>
+<script src="<?=e(theme_asset((string)(theme_info(active_theme())['script']??'script.js')))?>"></script>
+<script src="<?=e(site('assets/app.js'))?>"></script>
+<script src="<?=e(site('assets/comments.js'))?>"></script><script src="<?=e(site('assets/rating.js'))?>"></script>
+</body></html>

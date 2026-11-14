@@ -1,0 +1,30 @@
+<?php
+return [
+ 'db'=>['host'=>'127.0.0.1','name'=>'phim_web','user'=>'root','pass'=>'','charset'=>'utf8mb4'],
+ 'site'=>['name'=>'FilmNova','tagline'=>'Xem phim mới cập nhật mỗi ngày','base_path'=>'','timezone'=>'Asia/Ho_Chi_Minh','app_secret'=>'filmnova-local-secret-change-me'],
+ 'api'=>[
+   'base_url'=>'https://phimapi.com',
+   'latest_pages'=>3,
+   'timeout'=>8,
+   'latest_old'=>'/danh-sach/phim-moi-cap-nhat?page={page}',
+   'latest_v1'=>'/v1/api/danh-sach?page={page}',
+   'home_v1'=>'/v1/api/home',
+   'detail'=>'/v1/api/phim/{slug}',
+   'categories'=>'/the-loai',
+   'countries'=>'/quoc-gia',
+   'years'=>'/nam-phat-hanh',
+ ],
+ 'vsmov'=>[
+   'base_url'=>'https://vsmov.com',
+   'timeout'=>8,
+   'detail'=>'/api/phim/{slug}',
+   'latest'=>'/api/danh-sach/phim-moi-cap-nhat?page={page}',
+   'subteam'=>'/api/danh-sach/subteam',
+   'search'=>'/api/tim-kiem?keyword={keyword}&limit={limit}&page={page}',
+   'categories'=>'/api/the-loai',
+   'category'=>'/api/the-loai/{slug}?limit={limit}&page={page}&year={year}&country={country}&type={type}&status={status}',
+   'years'=>'/api/nam',
+   'year'=>'/api/nam/{year}?limit={limit}&page={page}&type={type}&status={status}',
+ ],
+];
+?>

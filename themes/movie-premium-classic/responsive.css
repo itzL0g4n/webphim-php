@@ -1,0 +1,204 @@
+/*!
+ * FilmNova Theme: Movie Premium Classic - responsive layer
+ * Load SAU style.css. Bien layout co dinh 980px thanh fluid.
+ */
+
+/* ---------- Fluid container ---------- */
+.wauto,
+#header .wauto,
+#slider .wauto,
+#content .wauto,
+#footer .wauto {
+  width: 100% !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+}
+
+/* Player / trailer giu ty le 16:9 */
+.player,
+.video-player,
+#player {
+  position: relative;
+  width: 100%;
+}
+.player iframe,
+.video-player iframe,
+#player iframe,
+.player video,
+#player video {
+  width: 100% !important;
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+  display: block;
+}
+
+/* Luoi phim co gian thay vi float co dinh */
+.movie-grid,
+.list-film ul,
+#content .list ul {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.movie-grid > *,
+.list-film ul > li,
+#content .list ul > li {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+.movie-grid img,
+.list-film ul li img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Desktop nho / laptop ---------- */
+@media (max-width: 1199px) {
+  .movie-grid,
+  .list-film ul,
+  #content .list ul {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* ---------- Tablet ngang ---------- */
+@media (max-width: 991px) {
+  .wauto {
+    padding: 0 12px;
+  }
+  .movie-grid,
+  .list-film ul,
+  #content .list ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  #main,
+  #content-left,
+  .content-left {
+    width: 100% !important;
+    float: none !important;
+  }
+  #sidebar,
+  #content-right,
+  .sidebar {
+    width: 100% !important;
+    float: none !important;
+    margin-top: 18px;
+  }
+  #slider ul li,
+  #slider .carousel,
+  #slider ul {
+    height: auto !important;
+    width: 33.3333% !important;
+  }
+}
+
+/* ---------- Tablet doc ---------- */
+@media (max-width: 767px) {
+  body {
+    background-size: cover;
+    font-size: 13px;
+  }
+  .movie-grid,
+  .list-film ul,
+  #content .list ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  /* Menu chinh cuon ngang thay vi vo dong */
+  #menu ul,
+  #nav ul,
+  .menu ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  #menu ul::-webkit-scrollbar,
+  #nav ul::-webkit-scrollbar {
+    display: none;
+  }
+  #menu ul li,
+  #nav ul li {
+    float: none !important;
+    flex: 0 0 auto;
+  }
+  #header {
+    height: auto !important;
+    padding: 8px 0;
+  }
+  #logo {
+    float: none !important;
+    display: block;
+    margin: 0 auto 8px;
+  }
+  #search,
+  .search-box {
+    float: none !important;
+    width: 100% !important;
+  }
+  #search input[type="text"],
+  .search-box input[type="text"] {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  #slider ul li {
+    width: 50% !important;
+  }
+}
+
+/* ---------- Dien thoai ---------- */
+@media (max-width: 479px) {
+  .movie-grid,
+  .list-film ul,
+  #content .list ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  #slider ul li {
+    width: 100% !important;
+  }
+  .movie-title,
+  .entry-title,
+  h1 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+  /* Nut bam du lon de cham */
+  .btn,
+  .button,
+  #menu a,
+  .pagination a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+  #footer {
+    text-align: center;
+    height: auto !important;
+    padding: 16px 12px;
+  }
+}
+
+/* ---------- Tien ich chung ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
